@@ -1,0 +1,6 @@
+carlo;giacomazzi;1234567890;;;
+ciao;rossato;3400076318;;;
+edoardo;milet;1234567890;;;
+filiberto;avena;1234567890;;;
+florian;sabani;1234567890;;;
+luca;daminato;1234567890;;;
