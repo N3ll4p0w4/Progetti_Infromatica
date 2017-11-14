@@ -10,6 +10,16 @@ public class ListaConcatenata<T> {
     private int lunghezza = 0;
     
     ListaConcatenata(){
+        testa = new NodoConc(null, null);
+    }
+    ListaConcatenata(T[] a){
+        this();
+        NodoConc temp = testa;
+        for(int i=0; i<a.length; i++){
+            temp.info = a[i];
+            temp.next = new NodoConc(null, null);
+            temp = temp.next;
+        }
     }
     
     public void add(T valore){
@@ -23,6 +33,20 @@ public class ListaConcatenata<T> {
         }
         lunghezza++;
     }
+    
+    public void addHead(T elem){
+        NodoConc temp = testa;
+        testa = new NodoConc(elem, temp);
+    } 
+
+    public void addTail(T elem){
+        NodoConc temp = testa;
+        while(temp.next != null){
+            temp = temp.next;
+        }
+        temp.info = elem;
+        temp.next = new NodoConc(null, null);
+    } 
     
     public void set(T valore, int pos){
         NodoConc temp = testa;
@@ -47,8 +71,32 @@ public class ListaConcatenata<T> {
         lunghezza--;
     }
     
+    public void removeHead(){
+        testa = testa.next;
+    }
+
+    public void removeTail(){
+        NodoConc temp = testa;
+        int l = size();
+        for(int i=0; i<l-1; i++){
+            temp = temp.next;
+        }
+        temp.next = null;
+    }
+    
     public int size(){
         return lunghezza;
     }
+    
+    @Override
+	public String toString(){
+            String r = "";
+            NodoConc temp = testa;
+            while(temp.next != null){
+                r += "["+temp.info.toString()+"] ";
+                temp = temp.next;
+            }
+            return r;
+	}
     
 }
