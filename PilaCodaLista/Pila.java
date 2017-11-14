@@ -2,7 +2,7 @@ package pilacodalista;
 
 /**
  *
- * @author luca.daminato
+ * @author Luca Daminato
  */
 
 public class Pila<T> {

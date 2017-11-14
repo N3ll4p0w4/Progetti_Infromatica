@@ -2,7 +2,7 @@ package pilacodalista;
 
 /**
  *
- * @author pigro
+ * @author Luca Daminato
  */
 public class Coda<T> {
     
