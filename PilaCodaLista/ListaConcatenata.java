@@ -92,7 +92,6 @@ public class ListaConcatenata<T> {
 	public String toString(){
             String r = "";
             NodoConc temp = testa;
-            dfg
             while(temp.next != null){
                 r += "["+temp.info.toString()+"] ";
                 temp = temp.next;
