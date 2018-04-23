@@ -1,0 +1,65 @@
+<html>
+
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<title>Esercizio 2 - Scheda Lavoro 07</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="scripts.js"></script>
+	</head>
+
+	<body align="center">
+		<div class="a">
+			<h1>Esercizio 2</h1>
+			<h2>Scheda lavoro 07</h2>
+			<form>
+        <h4>Inserisci i seguenti dati:</h4>
+				<br>
+
+				<b>Inserisci Nome e Cognome:</b>
+				<br>
+    		<input id="nome_cognome" type="text" maxlength="50" placeholder="Inserisci nome e cognome..." onkeyup="checkNomeCognome()">
+				<br>
+
+        <b>Inserisci sesso:</b><br>
+        <input type="radio" name="sesso" value="Maschio">Maschio
+        <input type="radio" name="sesso" value="Femmina">Femmina
+        <br>
+
+        <b>Ateneo:</b>
+				<br>
+        <select id="ateneo" onclick="checkAteneo()">
+          <option></option>
+          <option>Mestre</option>
+          <option>Padova</option>
+  			</select>
+        <br>
+
+				<b>Inserisci CAP:</b>
+				<br>
+    		<input id="cap" type="number" min="0" max="99999" placeholder="Inserisci CAP..." onchange="checkCap()" onkeyup="checkCap()">
+				<br>
+
+        <b>Inserisci mansione:</b><br>
+        <input type="checkbox" name="mansione" value="Studente">Studente
+        <br>
+        <input type="checkbox" name="mansione" value="Lavoratore" onclick="checkLavoratore()">Lavoratore
+        <br>
+
+				<b>Descrizione lavoro svolto:</b>
+				<br>
+        <textarea id="descrizione" maxlength="80" disabled></textarea>
+        <br>
+
+				<div id="buttons">
+        	<input type="button" onclick="invia()" value="Invia">
+        	<input type="button" onclick="reset()" value="Reset">
+        <br>
+				</div>
+		</form>
+	<script>
+		getView();
+	</script>
+	</div>
+	</body>
+</html>

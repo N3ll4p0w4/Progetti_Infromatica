@@ -1,0 +1,75 @@
+<html>
+
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<title>Esercizio 1 - Scheda Lavoro 07</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="scripts.js"></script>
+	</head>
+
+	<body align="center">
+		<div class="a">
+			<h1>Esercizio 1</h1>
+			<h2>Scheda lavoro 07</h2>
+			<form>
+        <h4>Inserisci i seguenti dati:</h4>
+				<br>
+				Inserisci Cognome:
+				<br>
+    		<input id="cognome" type="text" maxlength="40" placeholder="Inserisci cognome...">
+				<br>
+				Inserisci Nome:
+				<br>
+    		<input id="nome" type="text" maxlength="30" placeholder="Inserisci nome...">
+				<br>
+				Inserisci Matricola:
+				<br>
+    		<input id="matricola" type="number" maxlength="12" placeholder="Inserisci matricola..."><br>
+        Regione di residenza:
+				<br>
+        <select id="regione">
+          <option></option>
+          <option>Abruzzo</option>
+          <option>Basilicata</option>
+          <option>Calabria</option>
+          <option>Campania</option>
+          <option>Emilia-Romagna</option>
+          <option>Friuli-Venezia Giulia</option>
+          <option>Lazio</option>
+          <option>Liguria</option>
+          <option>Lombardia</option>
+          <option>Marche</option>
+          <option>Molise</option>
+          <option>Piemonte</option>
+          <option>Puglia</option>
+          <option>Sardegna</option>
+          <option>Sicilia</option>
+          <option>Toscana</option>
+          <option>Trentino-Alto Adige</option>
+          <option>Umbria</option>
+          <option>Valle d'Aosta</option>
+          <option>Veneto</option>
+  			</select><br>
+				Inserisci Email:
+				<br>
+    		<input id="email" type="email" maxlength="30" placeholder="Inserisci email...">
+				<br>
+				Inserisci Telefono:
+				<br>
+    		<input id="telefono" type="number" maxlength="15" placeholder="Inserisci telefono...">
+				<br>
+				Richieste particolari:
+				<br>
+        <textarea id="richieste" rows="12" cols="60"></textarea><br>
+				<div id="buttons">
+        	<input type="button" onclick="invia()" value="Invia">
+        	<button onclick="reset()">Reset</button><br>
+				</div>
+		</form>
+	<script>
+		getView();
+	</script>
+	</div>
+	</body>
+</html>
